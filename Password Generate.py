@@ -29,9 +29,7 @@ while flag2==0:
     ans=input("=>")
     if ans=="C":
         clip.copy(x)
-        # def Mbox(title, text, style): 
-            # return ctypes.windll.user32.MessageBoxW(0, text, title, style) 
-        # Mbox("Successfull", "Password is copied\nYour password is:\n=> " + x, 1)
+        print("Successful! Password is copied.")
         flag2=1
     elif ans=="S":
         print("Which app will you use this password in?")
