@@ -29,12 +29,21 @@ while flag2==0:
     ans=input("=>")
     if ans=="C":
         clip.copy(x)
-        print("Successful! Password is copied.")
+        flag2=1
+    elif ans=="c":
+        clip.copy(x)
         flag2=1
     elif ans=="S":
         print("Which app will you use this password in?")
         ans2=input("=>")
-        file = open("Passwords.txt", "w")
+        file = open("Passwords.txt", "a")
+        file.write(ans2 + " => " + x + "\n")
+        print("Saved to passwords.txt in this folder")
+        flag2=1
+    elif ans=="s":
+        print("Which app will you use this password in?")
+        ans2=input("=>")
+        file = open("Passwords.txt", "a")
         file.write(ans2 + " => " + x + "\n")
         print("Saved to passwords.txt in this folder")
         flag2=1
